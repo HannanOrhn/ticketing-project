@@ -131,10 +131,10 @@
                             <div id="submenu-2" class="collapse submenu" style="">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="user-create.html">User Create</a>
+                                        <a class="nav-link" href="user-create.html">Create User</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link" href="project-create.html">Project Create</a
+                                        <a class="nav-link" href="project-create.html">Create Project</a
                                         >
                                     </li>
                                 </ul>
@@ -153,7 +153,7 @@
                             <div id="submenu-3" class="collapse submenu" style="">
                                 <ul class="nav flex-column">
                                     <li class="nav-item">
-                                        <a class="nav-link" href="task-create.html">Task Create</a
+                                        <a class="nav-link" href="task-create.html">Create Task</a
                                         >
                                     </li>
                                     <li class="nav-item">
@@ -208,7 +208,7 @@
                         <div class="row">
                             <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
                                 <div class="page-header" id="top">
-                                    <h2 class="pageheader-title">User Create</h2>
+                                    <h2 class="pageheader-title">Create User</h2>
                                 </div>
                             </div>
                         </div>
@@ -217,19 +217,174 @@
                 <!-- ============================================================== -->
                         <!-- basic form  -->
                         <!-- ============================================================== -->
+                        <br>
                         <div class="row">
-                            <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                            <div class="col-xl-6 col-lg-6 col-md-6 col-sm-6 col-6">
                                         <form>
-                                            <div class="form-group">
+                                            <div class="row">
+                                                <div class="col lg-3">
+                                                <div class="form-group">
                                                 <label for="firstname" class="col-form-label">First Name</label>
                                                 <input id="firstname" type="text" class="form-control" placeholder="first name">
                                             </div>
-                                            <div class="form-group">
+                                            </div>
+                                                <div class="col lg-3">
+                                                <div class="form-group">
                                                 <label for="lastname" class="col-form-label">Last Name</label>
                                                 <input id="lastname" type="text" class="form-control" placeholder="last name">
                                             </div>
-
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col lg-3">
+                                                    <div class="form-group">
+                                                        <label for="email" class="col-form-label">Email</label>
+                                                        <input id="email" type="text" class="form-control" placeholder="email">
+                                                    </div>
+                                                </div>
+                                                <div class="col lg-3">
+                                                    <div class="form-group">
+                                                        <label for="phonenumber" class="col-form-label">Phone Number</label>
+                                                        <input id="phonenumber" type="text" class="form-control" placeholder="phone number">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col lg-3">
+                                                    <div class="form-group">
+                                                        <label for="password" class="col-form-label">Password</label>
+                                                        <input id="password" type="text" class="form-control" placeholder="password">
+                                                    </div>
+                                                </div>
+                                                <div class="col lg-3">
+                                                    <div class="form-group">
+                                                        <label for="password_confirm" class="col-form-label">Password</label>
+                                                        <input id="password_confirm" type="text" class="form-control" placeholder="confirm the password">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col lg-3">
+                                                    <div class="form-group">
+                                                        <label>Gender</label>
+                                                        <br>
+                                                        <label class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" name="radio-inline" checked="" class="custom-control-input"><span class="custom-control-label">Female</span>
+                                                        </label>
+                                                        <label class="custom-control custom-radio custom-control-inline">
+                                                            <input type="radio" name="radio-inline" checked="" class="custom-control-input"><span class="custom-control-label">Male</span>
+                                                        </label>
+                                                         </div>
+                                                </div>
+                                                <div class="col lg-3">
+                                                    <div class="form-group">
+                                                        <label>Choose a Role</label>
+                                                        <select name="roleid" id="roleid" class="custom-select" required="required">
+                                                            <option value="none" selected="selected">Select</option>
+                                                            <option value="admin" selected="selected">Admin</option>
+                                                            <option value="manager" selected="selected">Manager</option>
+                                                            <option value="employee" selected="selected">Employee</option>
+                                                        </select>
+                                                             </div>
+                                                </div>
+                                            </div>
+                                            <div class="row">
+                                                <div class="col-lg-12">
+                                                    <div class="form-group">
+                                                        <div class="float-right">
+                                                        <button class="btn btn-primary" type="submit" fdprocessedid="v1xs0j">Submit</button>
+                                                         </div>
+                                                    </div>
+                                                </div>
+                                            </div>
                                         </form>
+                            </div>
+                            <div class="col-lg-12">
+                                <div class="col-xl-12 col-lg-12 col-md-12 col-sm-12 col-12">
+                                    <div class="row">
+                                        <div class="page-header" id="buttom">
+                                            <h2 class="page-header-tittle">User List</h2>
+                                        </div>
+                                            <table class="table table-striped">
+                                                <thead>
+                                                <tr>
+                                                    <th scope="col">Full Name</th>
+                                                    <th scope="col">Email</th>
+                                                    <th scope="col">Phone Number</th>
+                                                    <th scope="col">Gender</th>
+                                                    <th scope="col">Role</th>
+                                                    <th scope="col">Action</th>
+                                                </tr>
+                                                </thead>
+                                                <tbody>
+                                                <tr>
+                                                    <td>Mark Otto</td>
+                                                    <td>MarkO@gmail.com</td>
+                                                    <td>123456789</td>
+                                                    <td>Male</td>
+                                                    <td>Employee</td>
+                                                    <td>
+                                                        <a href="#" class="update-row">
+                                                            <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                                        </a>
+                                                        <a href="#" class="delete-row">
+                                                            <button type="button" class="btn btn-warning btn-sm">Delete</button>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Hannan  Orhan</td>
+                                                    <td>hannano@gmail.com</td>
+                                                    <td>123456780</td>
+                                                    <td>Female</td>
+                                                    <td>Admin</td>
+                                                    <td>
+                                                        <a href="#" class="update-row">
+                                                            <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                                        </a>
+                                                        <a href="#" class="delete-row">
+                                                            <button type="button" class="btn btn-warning btn-sm">Delete</button>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                    <td>Mark</td>
+                                                    <td>Otto</td>
+                                                    <td>
+                                                        <a href="#" class="update-row">
+                                                            <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                                        </a>
+                                                        <a href="#" class="delete-row">
+                                                            <button type="button" class="btn btn-warning btn-sm">Delete</button>
+                                                        </a>
+                                                    </td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Larry</td>
+                                                    <td>the Bird</td>
+                                                    <td>@twitter</td>
+                                                    <td>Mark</td>
+                                                    <td>Otto</td>
+                                                    <td>
+                                                        <a href="#" class="update-row">
+                                                            <button type="button" class="btn btn-warning btn-sm">Update</button>
+                                                        </a>
+                                                        <a href="#" class="delete-row">
+                                                            <button type="button" class="btn btn-warning btn-sm">Delete</button>
+                                                        </a>
+                                                    </td>
+                                                </tr>>
+                                                </tbody>
+                                            </table>
+
+                                        <footer class="page-footer font-small blue fixed-bottom">
+                                            <div class="footer-copyright text-center py-3">2024 TaskTastic - All Rights Reserved</div>
+                                        </footer>
+                                </div>
+                            </div>
                             </div>
                         </div>
                         <!-- ============================================================== -->
